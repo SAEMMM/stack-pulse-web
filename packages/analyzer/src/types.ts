@@ -10,3 +10,5 @@ export type ParsedPackageJson = {
   packageName: string | null;
   dependencies: PackageDependency[];
 };
+
+export type VersionStatus = "up-to-date" | "outdated" | "unknown";
