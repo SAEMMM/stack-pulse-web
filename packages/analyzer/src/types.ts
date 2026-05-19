@@ -12,3 +12,13 @@ export type ParsedPackageJson = {
 };
 
 export type VersionStatus = "up-to-date" | "outdated" | "unknown";
+
+export type AnalyzedDependency = PackageDependency & {
+  latestVersion: string | null;
+  status: VersionStatus;
+};
+
+export type PackageAnalysis = {
+  packageName: string | null;
+  dependencies: AnalyzedDependency[];
+};

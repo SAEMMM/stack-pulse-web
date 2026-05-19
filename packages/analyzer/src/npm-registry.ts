@@ -4,6 +4,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
+// npm registry에서 latestVersion 조회
 export async function getLatestPackageVersion(
   packageName: string,
   fetcher: Fetcher = fetch,

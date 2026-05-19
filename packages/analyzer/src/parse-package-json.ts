@@ -4,6 +4,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
+// package.json에서 dependencies 추출
 function readDependencyGroup(
   packageJson: Record<string, unknown>,
   group: DependencyGroup,

@@ -1,6 +1,7 @@
 import { VersionStatus } from "./types";
 import semver from "semver";
 
+// currentRange와 latestVersion 비교
 export function compareVersion(
   currentRange: string,
   latestVersion: string | null,
