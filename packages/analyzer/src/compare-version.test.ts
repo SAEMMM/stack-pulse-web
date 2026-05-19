@@ -8,6 +8,10 @@ describe("compareVersion", () => {
   });
 
   it("최신 버전이 현재 범위를 만족하지 않으면 outdated여야 합니다.", () => {
+    expect(compareVersion("^15.0.0", null)).toBe("outdated");
+  });
+
+  it("최신 버전이 null이면 unknown이어야 합니다.", () => {
     expect(compareVersion("^15.0.0", null)).toBe("unknown");
   });
 
